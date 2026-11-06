@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox styleClass="menu-dialog" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sunway.foodordersystem.controller.MenuItemDialogController">
+   <children>
+      <ImageView fx:id="itemImage" fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" />
+      <VBox>
+         <children>
+            <Label fx:id="itemNameLabel">
+               <styleClass>
+                  <String fx:value="text-medium-small" />
+                  <String fx:value="text-black" />
+               </styleClass>
+            </Label>
+            <Label fx:id="itemPriceLabel">
+               <styleClass>
+                  <String fx:value="text-medium" />
+                  <String fx:value="text-dark-green" />
+               </styleClass>
+            </Label>
+            <Label fx:id="itemDescriptionLabel">
+               <styleClass>
+                  <String fx:value="text-small" />
+                  <String fx:value="text-grey" />
+               </styleClass>
+            </Label>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER_RIGHT">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleDecrement" styleClass="button-transparent" text="-">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="quantityLabel" styleClass="quantity-label" text="1" />
+            <Button mnemonicParsing="false" onAction="#handleIncrement" styleClass="button-transparent" text="+">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </HBox>
+      <AnchorPane>
+         <children>
+            <Button cancelButton="true" mnemonicParsing="false" onAction="#handleCancel" styleClass="button-secondary" text="Cancel" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button defaultButton="true" layoutY="132.0" mnemonicParsing="false" onAction="#handleAddToCart" styleClass="button-primary" text="Add To Cart" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

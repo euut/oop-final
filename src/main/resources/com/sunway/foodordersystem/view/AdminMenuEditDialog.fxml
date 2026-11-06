@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sunway.foodordersystem.controller.AdminMenuEditDialogController">
+    <children>
+        <GridPane hgap="5.0" vgap="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Item Name">
+               <styleClass>
+                  <String fx:value="text-normal" />
+                  <String fx:value="text-grey" />
+               </styleClass></Label>
+                <Label text="Price" GridPane.rowIndex="1">
+               <styleClass>
+                  <String fx:value="text-normal" />
+                  <String fx:value="text-grey" />
+               </styleClass></Label>
+                <Label text="Category" GridPane.rowIndex="2">
+               <styleClass>
+                  <String fx:value="text-normal" />
+                  <String fx:value="text-grey" />
+               </styleClass></Label>
+                <Label text="Image" GridPane.rowIndex="3">
+               <styleClass>
+                  <String fx:value="text-normal" />
+                  <String fx:value="text-grey" />
+               </styleClass></Label>
+                <Label text="Calories(cal)" GridPane.rowIndex="4">
+               <styleClass>
+                  <String fx:value="text-normal" />
+                  <String fx:value="text-grey" />
+               </styleClass></Label>
+                <Label text="Sugar(g)" GridPane.rowIndex="5">
+               <styleClass>
+                  <String fx:value="text-normal" />
+                  <String fx:value="text-grey" />
+               </styleClass></Label>
+                <TextField fx:id="itemNameField" promptText="Chicken Rice" GridPane.columnIndex="1" />
+                <TextField fx:id="priceField" promptText="0.00" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <TextField fx:id="imagePathField" promptText="img.png" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <TextField fx:id="caloriesField" promptText="0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <TextField fx:id="sugarField" promptText="0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label fx:id="categoryLabel" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <styleClass>
+                  <String fx:value="text-normal" />
+                  <String fx:value="text-grey" />
+               </styleClass></Label>
+            </children>
+        </GridPane>
+        <ButtonBar layoutX="150.0" layoutY="221.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+            <buttons>
+                <Button cancelButton="true" mnemonicParsing="false" onAction="#handleCancel" styleClass="button-secondary-small" text="Cancel">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+                <Button defaultButton="true" mnemonicParsing="false" onAction="#handleOk" styleClass="button-primary-small" text="OK">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            </buttons>
+        </ButtonBar>
+    </children>
+</AnchorPane>

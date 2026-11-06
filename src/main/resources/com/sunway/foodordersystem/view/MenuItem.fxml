@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+
+<HBox alignment="CENTER_LEFT" onMouseClicked="#handleClick" spacing="10" styleClass="menu-item-card" HBox.hgrow="ALWAYS" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sunway.foodordersystem.controller.MenuItemController">
+    <ImageView fx:id="itemImage" fitHeight="125.0" fitWidth="125.0" preserveRatio="true" />
+   <Region />
+    <Label fx:id="itemNameLabel">
+      <styleClass>
+         <String fx:value="text-medium-small" />
+         <String fx:value="text-black" />
+      </styleClass></Label>
+    <Region HBox.hgrow="ALWAYS" />
+    <Label fx:id="itemPriceLabel">
+      <styleClass>
+         <String fx:value="text-medium-small" />
+         <String fx:value="text-dark-green" />
+      </styleClass></Label>
+</HBox>
